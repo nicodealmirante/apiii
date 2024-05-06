@@ -15,8 +15,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const client = new Client({
-
+const client = new Client
 app.post('/enviar-mensaje', async (req, res) => {
   const { numero, mensaje } = req.body;
 
