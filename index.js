@@ -34,12 +34,11 @@ app.post('/enviar-mensaje', async (req, res) => {
 client.on('qr', (qr) => {
   console.log('QR recibido:')
   qrcode.generate(qr, { small: true })
-
+})
   client.on('ready', () => {
   console.log('Cliente de WhatsApp listo!')
-  
+  })
 client.initialize()
 
 app.listen(9000, () => {
-  console.log('API REST de WhatsApp iniciada en el puerto 9000.')}
-)})})
+  console.log('API REST de WhatsApp iniciada en el puerto 9000.')})
