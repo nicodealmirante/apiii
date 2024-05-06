@@ -71,14 +71,7 @@ client.initialize();
 
 app.get('/qr', (req, res) => {
   // Leer archivo de imagen y enviarlo como respuesta
-  fs.readFile('./qr.png', (err, data) => {
-    if (err) {
-      res.status(500).json({ error: 'Ocurrió un error al leer el archivo.' });
-    } else {
-      res.writeHead(200, { 'Content-Type': 'image/png' });
-      res.end(data);
-    }
-  });
+  
 });
 
 app.listen(9000, () => {
